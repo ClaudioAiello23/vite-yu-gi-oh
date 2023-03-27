@@ -21,7 +21,7 @@ export default {
 <template>
     <article>
         <div><img v-bind:src="card_images"></div>
-        <h3>{{ name }}</h3>
+        <h4>{{ name }}</h4>
         <div>{{ archetype }}</div>
     </article>
 </template>

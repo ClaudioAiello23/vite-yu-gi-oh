@@ -25,9 +25,10 @@ export default {
 
 <!-- PARTE HTML -->
 <template>
+    <div class="nb_found_cards_box py-3 fw-bold container ">Found TOT cards</div>
     <div class="nb_card_container container">
-        <div class="row">
-            <div class="col-2 nb_article_card_box" v-for="character in characters">
+        <div class="row justify-content-center">
+            <div class="nb_article_card_box col-2 mb-3 mx-3" v-for="character in characters">
                 <ItemCardsModel :img="character.card_images" :name="character.name" :archetype="character.archetype" />
             </div>
         </div>
@@ -36,16 +37,25 @@ export default {
 
 
     <!-- PARTE SCSS-->
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../assets/styles/_partials/_variables.scss' as *;
 
+.nb_found_cards_box {
+    background-color: #212529;
+    color: $secondary_color;
+}
+
 .nb_card_container {
-    background-color: white;
-    padding: 3.125rem;
+    background-color: $secondary_color;
+    padding-bottom: 3.125rem;
 
     .nb_article_card_box {
         border: 1px solid black;
         background-color: $primary_color;
+
+        h4 {
+            color: $secondary_color;
+        }
     }
 
 }
