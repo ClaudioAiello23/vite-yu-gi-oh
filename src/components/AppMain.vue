@@ -12,7 +12,9 @@ export default {
 
 <!-- PARTE HTML -->
 <template>
-    <CharacterCards />
+    <main class="container-fluid">
+        <CharacterCards />
+    </main>
 </template>
 
 <!-- PARTE SCSS-->

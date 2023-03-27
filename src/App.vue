@@ -1,13 +1,13 @@
 <!-- PARTE VUE JS-->
 <script>
 import AppHeader from './components/AppHeader.vue';
-import CharacterCards from './components/CharacterCards.vue';
+import AppMain from './components/AppMain.vue';
 
 export default {
   name: 'App',
   components: {
     AppHeader,
-    CharacterCards
+    AppMain
   }
 }
 
@@ -16,5 +16,5 @@ export default {
 <!-- PARTE HTML -->
 <template>
   <AppHeader />
-  <CharacterCards />
+  <AppMain />
 </template>
