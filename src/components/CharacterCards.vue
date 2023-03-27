@@ -1,11 +1,18 @@
 <!-- PARTE VUE JS-->
 <script>
 import ItemCardsModel from './ItemCardsModel.vue';
+import axios from 'axios';
 
 export default {
     name: 'CharacterCards',
     components: {
         ItemCardsModel
+    },
+    data() {
+
+    },
+    created() {
+
     }
 }
 </script>
