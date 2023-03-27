@@ -20,7 +20,7 @@ export default {
 <!-- PARTE HTML -->
 <template>
     <article>
-        <div><img v-bind:src="card_images"></div>
+        <div class="card_box"><img v-bind:src="card_images"></div>
         <h4>{{ name }}</h4>
         <div>{{ archetype }}</div>
     </article>

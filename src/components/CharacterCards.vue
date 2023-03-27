@@ -23,7 +23,8 @@ export default {
     <div class="nb_card_container container">
         <div class="row justify-content-center">
             <div class="nb_article_card_box col-2 mb-3 mx-3" v-for="character in store.characters">
-                <ItemCardsModel :img="character.card_images" :name="character.name" :archetype="character.archetype" />
+                <ItemCardsModel v-bind:img="character.card_images" v-bind:name="character.name"
+                    v-bind:archetype="character.archetype" />
             </div>
         </div>
     </div>
@@ -41,16 +42,14 @@ export default {
 
 .nb_card_container {
     background-color: $secondary_color;
-    padding-bottom: 3.125rem;
+    padding-bottom: .625rem;
 
     .nb_article_card_box {
-        border: 1px solid black;
         background-color: $primary_color;
 
         h4 {
             color: $secondary_color;
         }
     }
-
 }
 </style>
