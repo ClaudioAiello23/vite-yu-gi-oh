@@ -1,7 +1,8 @@
 <!-- PARTE VUE JS-->
 <script>
+import { store } from '../store.js'; //sintassi per l'import del file store.js (la parola store è scritta tra graffe)
+
 import ItemCardsModel from './ItemCardsModel.vue';
-import axios from 'axios';
 
 export default {
     name: 'CharacterCards',
@@ -10,25 +11,18 @@ export default {
     },
     data() {
         return {
-            characters: []
+            store
         }
-    },
-    created() {
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
-            .then((response) => {
-                console.log(response);
-                this.characters = (response.data.data);
-            })
     }
 }
 </script>
 
 <!-- PARTE HTML -->
 <template>
-    <div class="nb_found_cards_box py-3 fw-bold container ">Found TOT cards</div>
+    <div class="nb_found_cards_box py-3 fw-bold container ">Found {{ store.characters.length }} cards</div>
     <div class="nb_card_container container">
         <div class="row justify-content-center">
-            <div class="nb_article_card_box col-2 mb-3 mx-3" v-for="character in characters">
+            <div class="nb_article_card_box col-2 mb-3 mx-3" v-for="character in store.characters">
                 <ItemCardsModel :img="character.card_images" :name="character.name" :archetype="character.archetype" />
             </div>
         </div>
