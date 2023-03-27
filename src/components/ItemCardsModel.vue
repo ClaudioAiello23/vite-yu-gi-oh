@@ -6,7 +6,7 @@
 export default {
     name: 'ItemCardsModel',
     props: {
-        image: String,
+        card_images: String,
         name: String,
         archetype: String
     },
@@ -20,7 +20,7 @@ export default {
 <!-- PARTE HTML -->
 <template>
     <article>
-        <div><img v-bind:src="image"></div>
+        <div><img v-bind:src="card_images"></div>
         <h3>{{ name }}</h3>
         <div>{{ archetype }}</div>
     </article>
