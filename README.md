@@ -1,8 +1,11 @@
-VUE JS TEMPLATE 
+PROGETTO YU GI OH
 
-Template di partenza per progetti Vue con option API (VueJS)
+- CARTELLE IMPORTATE DA PROGETTO TEMPLATE GENERALE in repository GitHub
+- LANCIATO SUCCESSIVAMENTE NPM INSTALL per la creazione delle cartelle rimanenti (node_modules, etc)
 
-Per installare il progetto
+PER IL PRESENTE PROGETTO SONO STATI AGGIUNTI I SEGUENTI PACCHETTI/LIBREERIE (ricercate dalla documentazione NPM):
 
-npm install
-npm run dev
+- BOOTSTRAP
+- AXIOS
+
+SUCCESSIVAMENTE è STATA LANCIATO IL SERVER CON IL COMANDO 'NPM RUN DEV'

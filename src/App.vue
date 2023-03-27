@@ -1,11 +1,11 @@
 <!-- PARTE VUE JS-->
 <script>
-import DefaultComponent from './components/DefaultComponent.vue';
+import CharacterCards from './components/CharacterCards.vue';
 
 export default {
   name: 'App',
   components: {
-    DefaultComponent
+    CharacterCards
   }
 }
 
@@ -13,5 +13,5 @@ export default {
 
 <!-- PARTE HTML -->
 <template>
-  <DefaultComponent />
+  <CharacterCards />
 </template>
