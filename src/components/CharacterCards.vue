@@ -22,8 +22,8 @@ export default {
     <div class="nb_found_cards_box py-3 fw-bold container ">Found {{ store.characters.length }} cards</div>
     <div class="nb_card_container container">
         <div class="row justify-content-center">
-            <div class="nb_article_card_box col-2 mb-3 mx-3" v-for="character in store.characters">
-                <ItemCardsModel v-bind:img="character.card_images" v-bind:name="character.name"
+            <div class="nb_article_card_box col-2 mb-3 mx-3" v-for="(character, index) in store.characters">
+                <ItemCardsModel v-bind:img="character.card_images[0].image_url" v-bind:name="character.name"
                     v-bind:archetype="character.archetype" />
             </div>
         </div>
