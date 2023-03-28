@@ -13,7 +13,7 @@ export default {
         // funzione che prende $emit segnalato dal figlio CardSelect.vue e lo passa al padre AppMain.vue
         selectOption() {
             console.log('ho ascoltato questo evento');
-            this.$emit('prova');
+            this.$emit('searchFinal');
         }
     }
 }

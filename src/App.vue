@@ -18,6 +18,19 @@ export default {
       store
     }
   },
+  methods: {
+    search() {
+      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php', {
+        params: {
+          archetype_name: store.selectArchetype
+        }
+      })
+        .then((response) => {
+          console.log(response);
+          store.selectArchetype = response.archetype_name;
+        })
+    }
+  },
   created() {
     axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
       .then((response) => {
@@ -33,5 +46,5 @@ export default {
 <!-- PARTE HTML -->
 <template>
   <AppHeader />
-  <AppMain />
+  <AppMain @searchFinal="search" />
 </template>
