@@ -21,10 +21,10 @@ export default {
 <template>
     <div class="nb_found_cards_box py-3 fw-bold container ">Found {{ store.characters.length }} cards</div>
     <div class="nb_card_container container">
-        <div class="row justify-content-center">
-            <div class="nb_article_card_box col-2 mb-3 mx-3" v-for="(character, index) in store.characters.slice(0, 50)">
+        <div class="row justify-content-between">
+            <div class=" nb_article_card_box text-center col-2" v-for="character in store.characters.slice(0, 50)">
                 <!-- NB slice(0, 50) mi fa vedere nel Dom 50 cards su 12461 -->
-                <ItemCardsModel v-bind:img="character.card_images[0].image_url" v-bind:name="character.name"
+                <ItemCardsModel v-bind:img="character.card_images[0].image_url_small" v-bind:name="character.name"
                     v-bind:archetype="character.archetype" />
             </div>
         </div>
@@ -35,6 +35,15 @@ export default {
     <!-- PARTE SCSS-->
 <style lang="scss">
 @use '../assets/styles/_partials/_variables.scss' as *;
+
+.single_card_box {
+    padding-bottom: .9375rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
 
 .nb_found_cards_box {
     background-color: #212529;
@@ -47,9 +56,14 @@ export default {
 
     .nb_article_card_box {
         background-color: $primary_color;
+        width: calc(100% / 5);
+        padding-bottom: 1.25rem;
 
-        h4 {
+
+        h5 {
             color: $secondary_color;
+            text-align: center;
+            padding-bottom: .625rem;
         }
     }
 }
