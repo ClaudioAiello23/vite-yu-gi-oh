@@ -22,7 +22,8 @@ export default {
     <div class="nb_found_cards_box py-3 fw-bold container ">Found {{ store.characters.length }} cards</div>
     <div class="nb_card_container container">
         <div class="row justify-content-center">
-            <div class="nb_article_card_box col-2 mb-3 mx-3" v-for="(character, index) in store.characters">
+            <div class="nb_article_card_box col-2 mb-3 mx-3" v-for="(character, index) in store.characters.slice(0, 50)">
+                <!-- NB slice(0, 50) mi fa vedere nel Dom 50 cards su 12461 -->
                 <ItemCardsModel v-bind:img="character.card_images[0].image_url" v-bind:name="character.name"
                     v-bind:archetype="character.archetype" />
             </div>

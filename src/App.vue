@@ -24,7 +24,6 @@ export default {
         console.log(response);
         this.store.characters = (response.data.data);
         this.store.charactersFound = (response.data.data.length);
-        this.store.characters.length = 40 //prova- impostata lunghezza dell'Array 'characters' a max 15 cards in visualizzazione
       })
   }
 }
