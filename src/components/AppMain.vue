@@ -12,7 +12,7 @@ export default {
     methods: {
         // funzione che prende $emit segnalato dal figlio CardSelect.vue e lo passa al padre AppMain.vue
         selectOption() {
-            console.log('ho ascoltato questo evento');
+            console.log('AppMain ha ascoltato evento girato da CardSelect.vue');
             this.$emit('searchFinal');
         }
     }
@@ -22,7 +22,7 @@ export default {
 <!-- PARTE HTML -->
 <template>
     <main class="container-fluid">
-        <CardSelect @SearchArchetype="selectOption" />
+        <CardSelect @searchArchetype="selectOption" />
         <CharacterCards />
     </main>
 </template>

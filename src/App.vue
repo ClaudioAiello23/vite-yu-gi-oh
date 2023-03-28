@@ -23,7 +23,7 @@ export default {
       axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
         .then((response) => {
           console.log(response);
-          this.store.selectArchetype = response.data; // RICONTROLLARE
+          this.store.selectArchetype = response.data;
         })
     }
   },
@@ -34,14 +34,14 @@ export default {
         this.store.characters = (response.data.data);
         this.store.charactersFound = (response.data.data.length);
       })
-    this.search() // RICONTROLLARE
-  }
 
+    this.search()
+  }
 }
 </script>
 
 <!-- PARTE HTML -->
 <template>
   <AppHeader />
-  <AppMain @searchFinal="search()" />
+  <AppMain @searchFinal="search" />
 </template>

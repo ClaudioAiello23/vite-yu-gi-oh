@@ -18,7 +18,7 @@ export default {
         <div class="row">
             <div class="col-2">
                 <!--collego la proprietà ereditata da store.js -->
-                <select class="form-select my-4" v-model="store.selectArchetype" @change="$emit('SearchArchetype')">
+                <select class="form-select my-4" v-model="store.selectArchetype" @change="$emit('searchArchetype')">
                     <!--inserisco value='' per poter vedere il valore di default "Select an Archetype" al caricamento della pagina -->
                     <option selected value="">Select an Archetype</option>
                     <!--RICONTROLLARE -->
