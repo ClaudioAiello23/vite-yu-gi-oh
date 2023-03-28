@@ -23,7 +23,7 @@ export default {
       axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
         .then((response) => {
           console.log(response);
-          this.store.selectArchetype = response.data;
+          this.store.selectArchetype = response.data; // RICONTROLLARE
         })
     }
   },
@@ -34,7 +34,9 @@ export default {
         this.store.characters = (response.data.data);
         this.store.charactersFound = (response.data.data.length);
       })
+    this.search() // RICONTROLLARE
   }
+
 }
 </script>
 

@@ -21,6 +21,7 @@ export default {
                 <select class="form-select my-4" v-model="store.selectArchetype" @change="$emit('SearchArchetype')">
                     <!--inserisco value='' per poter vedere il valore di default "Select an Archetype" al caricamento della pagina -->
                     <option selected value="">Select an Archetype</option>
+                    <!--RICONTROLLARE -->
                     <option v-for="archetype in store.selectArchetype">{{ archetype.archetype_name }}</option>
                 </select>
             </div>
