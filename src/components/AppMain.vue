@@ -8,6 +8,13 @@ export default {
     components: {
         CardSelect,
         CharacterCards
+    },
+    methods: {
+        // funzione che prende $emit segnalato dal figlio CardSelect.vue e lo passa al padre AppMain.vue
+        selectOption() {
+            console.log('ho ascoltato questo evento');
+            this.$emit('prova');
+        }
     }
 }
 </script>
@@ -15,7 +22,7 @@ export default {
 <!-- PARTE HTML -->
 <template>
     <main class="container-fluid">
-        <CardSelect />
+        <CardSelect @SearchArchetype="selectOption" />
         <CharacterCards />
     </main>
 </template>

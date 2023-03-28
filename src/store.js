@@ -5,7 +5,8 @@ import { reactive } from "vue";
 
 export const store = reactive({
     characters: [], // info da gestire
-    charactersFound: 0 // info da gestire
+    charactersFound: 0, // info da gestire
+    selectArchetype: '', // info da gestire nella select Dropdown
 })
 
 // Una volta creato store.js, lo richiamo come import nel componente principale APP.vue e nel componente che ne richiede l'utilizzo;
