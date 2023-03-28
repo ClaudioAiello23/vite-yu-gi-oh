@@ -20,14 +20,10 @@ export default {
   },
   methods: {
     search() {
-      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php', {
-        params: {
-          archetype_name: store.selectArchetype
-        }
-      })
+      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
         .then((response) => {
           console.log(response);
-          store.selectArchetype = response.archetype_name;
+          this.store.selectArchetype = response.data.archetype_name;
         })
     }
   },
@@ -40,11 +36,10 @@ export default {
       })
   }
 }
-
 </script>
 
 <!-- PARTE HTML -->
 <template>
   <AppHeader />
-  <AppMain @searchFinal="search" />
+  <AppMain @searchFinal="search()" />
 </template>
